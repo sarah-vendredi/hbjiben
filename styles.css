@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Arya&display=swap');
+
+@font-face {
+    font-family: "Dollie";
+    src:local("Dollie"),
+    url("./font/Dollie.ttf") format("opentype");
+}
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.container {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
+    min-height: 100vh;
+}
+
+.title {
+    padding: 3.5rem 0;
+    background-image: url("./images/mousstache.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+}
+
+.heading {
+    font-family: "Dollie", Arial, sans-serif;
+    font-size: 10rem;
+    font-weight: 500;
+    color: #E0218A;
+    text-shadow: 2px 0 0 #fafafa;
+    margin-bottom: -40px;
+}
+
+.firstname {
+    font-family: "Dollie", Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #E0218A;
+    text-align: center;
+}
+
+.label {
+    display: block;
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 2rem;
+    color: #632D19;
+    text-align: center;
+    margin-bottom: -20px;
+    padding: 0;
+}
+
+.heading span {
+    display: block;
+}
+
+.subtitle {
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 5rem;
+    color: #fafafa;
+    text-shadow: -2px 0 #632D19, 0 2px #632D19,
+    2px 0 #632D19, 0 -2px #632D19;
+}
+
+#info {
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 2rem;
+    color: #fafafa;
+    float: right;
+    margin-top: 1rem;
+    padding-right: 2rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* Compensate for excess margin on outer gallery flex items */
+    margin: -1rem -1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 400ms ease-out;
+}
+
+
+.gallery-item img {
+    width: 100%; display: block;
+}
+
+
+.grow {
+    background-color: #E0218A;
+    color: #fafafa;
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 1em;
+    top: 50%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    height: 49px;
+    width: 10%;
+    margin: 5px 1% 5px 1%;
+    float: left;
+    position: fixed;
+    transition: height 0.5s;
+    -webkit-transition: height 0.5s;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 1;
+}
+.grow:hover {
+    height: auto;
+    width: 20vw;
+    color: #fafafa;
+    font-size: 1em;
+    padding: 1em;
+}
+
+.footer {
+    background-color: #E0218A;
+    width: 100%;
+    height: 120px;
+    margin-top: auto;
+}
+
+.footer > p {
+    color: #fafafa;
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+}
+
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+    }
+
+    .gallery,
+    .gallery-item {
+        margin: 0;
+    }
+}
+
