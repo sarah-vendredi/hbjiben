@@ -53,6 +53,13 @@ body {
     text-align: center;
 }
 
+.fun {
+    font-family: "Dollie", Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fafafa;
+}
+
 .label {
     display: block;
     font-family: "Arya", Arial, sans-serif;
@@ -73,15 +80,6 @@ body {
     color: #fafafa;
     text-shadow: -2px 0 #632D19, 0 2px #632D19,
     2px 0 #632D19, 0 -2px #632D19;
-}
-
-#info {
-    font-family: "Arya", Arial, sans-serif;
-    font-size: 2rem;
-    color: #fafafa;
-    float: right;
-    margin-top: 1rem;
-    padding-right: 2rem;
 }
 
 .gallery {
@@ -142,18 +140,36 @@ body {
 }
 
 .footer {
+    display: flex;
+    flex-direction: column;
     background-color: #E0218A;
     width: 100%;
-    height: 120px;
-    margin-top: auto;
+    padding-right: 3rem;
+    padding-left: 2rem;
+    box-sizing: content-box;
 }
 
-.footer > p {
+#info {
+    font-family: "Arya", Arial, sans-serif;
+    font-size: 2rem;
+    color: #fafafa;
+    margin-left: auto;
+    padding-right: 3rem;
+
+}
+
+li {
     color: #fafafa;
     font-family: "Arya", Arial, sans-serif;
-    font-size: 1.5rem;
-    padding-top: 3rem;
-    padding-left: 2rem;
+    font-size: 1.6rem;
+}
+
+li > a {
+    color: #fafafa;
+}
+
+p > a {
+    color: #fafafa;
 }
 
 @supports (display: grid) {
